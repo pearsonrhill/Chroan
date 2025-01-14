@@ -1,0 +1,97 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quran Viewer</title>
+    <link rel="stylesheet" href="newTab.css">
+</head>
+<body>
+    
+        <div id="clock"></div>
+        <div class="container">
+            <div class="content">
+                <h1 id="arabic-text">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</h1>
+                <div class="metadata">
+                    <span id="surah-name">An-Naba (78:13)</span>
+                    <span id="transliteration">(1) Alif, Lam, Meem.</span>
+                </div>
+                <div class="translation" id="translation-text">
+
+                </div>
+                <audio id="recitation-audio" controls>
+                    <source id="audio-source" src="" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <div class="buttons">
+                    <button id="play-btn">Play</button>
+                    <button id="pause-btn">Pause</button>
+                    <button id="toggle-btn">Toggle Content</button>
+                </div>
+            </div>
+        </div>
+
+    <script src="newTab.js"></script>
+</body>
+</html> -->
+
+
+
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri+Quran&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="newTab.css">
+    <link rel="stylesheet" href="settings.css">
+    <title>30 Seconds of Islam</title>
+  </head>
+  <body>
+    <div id="container" class="light-theme">
+      <div class="ayah-container light-theme">
+        <div class="mandala">
+          <img src="assets/images/mandala.png">
+        </div>
+        <p class="ayah-text">يَوْمَ يَكُونُ ٱلنَّاسُ كَٱلْفَرَاشِ ٱلْمَبْثُوثِ (سُورَةُ القَارِعَةِ 6161)</p>
+        <p class="ayah-translation">[It will occur] on the Day when men will be like moths swarming in confusion, (Al-Qaari'a 6161)</p>
+        <div class="mandala upside-down">
+          <img src="assets/images/mandala.png">
+        </div>
+      </div>
+      <div class="options-container">
+        <button class="recitation-button">
+          <img src="assets/images/audio.svg">
+        </button>
+        <div class="theme-toggle">
+          <input type="checkbox" id="theme-switch">
+          <label for="theme-switch"></label>
+        </div>
+        <button class="settings-button">
+          <img src="assets/images/settings.svg">
+        </button>
+      </div>
+    </div>
+
+    <!-- Settings Modal -->
+    <div id="settings-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-button">×</span>
+        <h2>Settings</h2>
+        <div class="select-container">
+          <label for="reciter-select">Select Reciter:</label>
+          <select id="reciter-select"></select>
+        </div>
+        <label>
+          <input type="checkbox" id="khatma-mode-checkbox">
+          Khatma Mode
+        </label>
+        <span id="completed-khatma-count"></span>
+      </div>
+    </div>
+
+    <script type="module" src="newTab.js"></script>
+    <script type="module" src="settings.js"></script>
+  
+
+</body></html>

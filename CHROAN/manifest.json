@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Curan",
+  "version": "1.0.0",
+  "description": "Halal Chrome Browser Extension.",
+  "permissions": ["storage", "tabs", "geolocation", "activeTab"],
+  "chrome_url_overrides": {
+    "newtab": "Main/NewTabFeature/newTab.html"
+  },
+  "action": {
+    "default_popup": "Main/Main.html",
+    "default_icon": {}
+  },
+  "icons": {},
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "host_permissions": [
+    "https://quran.com/"
+  ]
+}

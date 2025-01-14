@@ -1,278 +1,137 @@
-/* Reset and general styling */
-/* * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* 
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+  text-align: center;
 }
 
-body, html {
-    height: 100%;
-    background-image: url('http://127.0.0.1:5500/Main/assets/mecca.jpg');
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Arial, sans-serif;
+#container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.container {
-    background: rgba(0, 0, 0, 0.6);
-    padding: 30px;
-    border-radius: 10px;
-    text-align: center;
-    color: white;
-    width: 60%;
+.ayah-container {
+  margin-bottom: 20px;
 }
 
 h1 {
-    font-size: 48px;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+  font-size: 24px;
+  color: #2c3e50;
+  margin: 0;
 }
 
 .metadata {
-    font-size: 18px;
-    margin: 10px 0;
-}
-
-#surah-name {
-    font-weight: bold;
-}
-
-#transliteration {
-    font-style: italic;
+  font-size: 14px;
+  color: #7f8c8d;
+  margin-top: 10px;
 }
 
 .translation {
-    margin-top: 20px;
-    font-size: 22px;
-    color: #ddd;
+  margin: 20px 0;
+  font-style: italic;
+  color: #34495e;
 }
 
-audio {
-    margin-top: 20px;
-    width: 100%;
-    background-color: transparent;
+.buttons button {
+  margin: 5px;
+  padding: 10px 15px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #3498db;
+  color: #fff;
 }
 
-.buttons {
-    margin-top: 20px;
+.buttons button:hover {
+  background-color: #2980b9;
 }
 
-button {
-    padding: 10px 20px;
-    margin: 5px;
-    border: none;
-    background-color: #ff69b4;
-    color: white;
-    font-size: 18px;
-    cursor: pointer;
-}
 
-button:hover {
-    background-color: #ff4c92;
-}
-
-button {
-    padding: 10px 20px;
-    margin: 5px;
-    border: none;
-    background-color: #ff69b4;
-    color: white;
-    font-size: 18px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #ff4c92;
-}
 
 
 #clock {
-    position: relative;
-    font-size: 80px;
-    font-weight: var(--font-weight-bold);
-    line-height: 80px;
-    margin-bottom: var(--default-padding);
-    text-shadow: 0 0 4px rgba(0, 0, 0, .3);
-    color: var(--color-light1);
-  } */
+  position: relative;
+  font-size: 80px;
+  font-weight: var(--font-weight-bold);
+  line-height: 80px;
+  margin-bottom: var(--default-padding);
+  text-shadow: 0 0 4px rgba(0, 0, 0, .3);
+  color: var(--color-light1);
+} */
 
 
+/* styles.css */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #ffcccb, #d1e8ff);
+}
 
-  @font-face {
-    font-family: kitab;
-    src: url(assets/Kitab-Regular.ttf);
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    background-color: #333;
-    font-family: kitab, "Amiri Quran", serif;
-  }
-  
-  #container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    color: #fff;
-    background-color: hsla(78, 0%, 0%, 1);
-    background-image: radial-gradient(
-        at 85% 76%,
-        hsla(240, 21%, 5%, 1) 0px,
-        transparent 50%
-      ),
-      radial-gradient(at 15% 18%, hsla(278, 3%, 42%, 1) 0px, transparent 50%),
-      radial-gradient(at 63% 96%, hsla(180, 69%, 14%, 1) 0px, transparent 50%),
-      radial-gradient(at 60% 36%, hsla(238, 82%, 64%, 1) 0px, transparent 50%),
-      radial-gradient(at 47% 62%, hsla(224, 100%, 51%, 1) 0px, transparent 50%),
-      radial-gradient(at 6% 30%, hsla(237, 47%, 27%, 1) 0px, transparent 50%),
-      radial-gradient(at 47% 89%, hsla(71, 38%, 18%, 1) 0px, transparent 50%);
-  }
-  
-  .mandala {
-    height: 70px;
-  }
-  
-  .mandala.upside-down {
-    transform: rotate(180deg);
-    margin-top: 20px;
-  }
-  
-  .mandala img {
-    height: 100%;
-    filter: contrast(0.5);
-  }
-  
-  .ayah-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    border-radius: 20px;
-    text-align: center;
-    max-width: 80%;
-    background: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(0px);
-    -webkit-backdrop-filter: blur(0px);
-    font-size: 2rem;
-    font-weight: bold;
-    margin: 10px 0;
-  }
-  
-  .ayah-text {
-    margin-top: 30px;
-  }
-  
-  .ayah-translation {
-    margin: 10px 0;
-    line-height: 1.2;
-    font-weight: 400;
-    font-size: 1.5rem;
-  }
-  
-  .options-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-  }
-  
-  .bookmark-button,
-  .recitation-button,
-  .theme-toggle,
-  .settings-button {
-    padding: 10px 20px;
-    margin: 0 10px;
-    border: none;
-    border-radius: 5px;
-    background: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(0px);
-    -webkit-backdrop-filter: blur(0px);
-    color: #fff;
-    font-size: 1.2rem;
-    font-weight: bold;
-    cursor: pointer;
-    align-self: stretch;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 72px;
-    height: 52px;
-  }
-  
-  .bookmark-button:hover,
-  .recitation-button:hover,
-  .theme-toggle:hover,
-  .settings-button:hover {
-    background: rgb(255 255 255 / 27%);
-  }
-  
-  .recitation-button img,
-  .settings-button img {
-    width: 32px;
-    height: 32px;
-  }
-  
-  .theme-toggle {
-    padding: 0;
-    position: relative;
-  }
-  
-  .theme-toggle input[type="checkbox"] {
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    cursor: pointer;
-  }
-  
-  .theme-toggle input[type="checkbox"] + label:before {
-    content: "â˜€ï¸";
-    color: #f1c40f;
-    /* font-size: 1.5rem; */
-    cursor: pointer;
-    position: absolute;
-    top: 15px;
-    left: 25px;
-  }
-  
-  .theme-toggle input[type="checkbox"]:checked + label:before {
-    content: "ðŸŒ‘";
-    color: #f39c12;
-  }
-  
-  #container.light-theme {
-    background-color: hsla(0, 0%, 100%, 1);
-    background-image: radial-gradient(
-        at 40% 20%,
-        hsla(28, 100%, 74%, 1) 0px,
-        transparent 50%
-      ),
-      radial-gradient(at 80% 0%, hsla(189, 100%, 56%, 1) 0px, transparent 50%),
-      radial-gradient(at 0% 50%, hsla(355, 100%, 93%, 1) 0px, transparent 50%),
-      radial-gradient(at 80% 50%, hsla(340, 100%, 76%, 1) 0px, transparent 50%),
-      radial-gradient(at 0% 100%, hsla(22, 100%, 77%, 1) 0px, transparent 50%),
-      radial-gradient(at 80% 100%, hsla(242, 100%, 70%, 1) 0px, transparent 50%),
-      radial-gradient(at 0% 0%, hsla(343, 100%, 76%, 1) 0px, transparent 50%);
-    color: #333;
-  }
-  
-  .ayah-container.light-theme {
-    background: rgba(0, 0, 0, 0.35);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-  }
-  
-  .ayah-container.light-theme .mandala img {
-    filter: brightness(0.5);
-  }
+.card {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: 90%;
+  max-width: 800px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+.verse {
+  margin-bottom: 20px;
+}
+
+.arabic {
+  font-family: 'Scheherazade', serif; /* Use a proper Arabic font */
+  font-size: 24px;
+  line-height: 1.8;
+  color: #333;
+}
+
+.translation {
+  font-size: 18px;
+  color: #555;
+  margin-top: 15px;
+}
+
+.surah {
+  font-style: italic;
+  margin-top: 10px;
+  color: #777;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+button {
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 50%;
+  padding: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #ddd;
+  transform: scale(1.1);
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f4f4f9;
+    }
+
+    .settings-container {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      text-align: center;
+    }
+
+    .settings-title {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .toggle-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      font-size: 18px;
+      color: #555;
+    }
+
+    .toggle {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+    }
+
+    .toggle input {
+      display: none;
+    }
+
+    .slider {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      border-radius: 24px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .slider:before {
+      content: "";
+      position: absolute;
+      height: 18px;
+      width: 18px;
+      background-color: white;
+      border-radius: 50%;
+      top: 3px;
+      left: 3px;
+      transition: transform 0.3s;
+    }
+
+    input:checked + .slider {
+      background-color: #4caf50;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+  </style>
+</head>
+<body>
+  <div class="settings-container">
+    <div class="settings-title">Settings</div>
+
+    <div class="toggle-container">
+      <span>Adhan</span>
+      <label class="toggle">
+        <input type="checkbox" id="adhan-toggle">
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <p id="status" style="color: #777;">Adhan is disabled</p>
+  </div>
+
+  <script>
+    // Get the toggle button and status text
+    const adhanToggle = document.getElementById("adhan-toggle");
+    const statusText = document.getElementById("status");
+
+    // Event listener for the toggle button
+    adhanToggle.addEventListener("change", function () {
+      if (adhanToggle.checked) {
+        statusText.textContent = "Adhan is enabled";
+        statusText.style.color = "#4caf50";
+      } else {
+        statusText.textContent = "Adhan is disabled";
+        statusText.style.color = "#777";
+      }
+    });
+  </script>
+</body>
+</html>
